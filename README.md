@@ -925,14 +925,6 @@ def error_correction_model(data, ardl_fit, cointegration_result, lag_order):
         print(f"Cointegration test result: {cointegration_result}")
         print("Does not meet the prerequisites for building ECM, only analyze short-term ARDL effects")
 
-        with open(r'C:\Users\A\Desktop\ecm_results.txt', 'w', encoding='utf-8') as f:
-            f.write("Error Correction Model (ECM) Analysis Results\n")
-            f.write("=" * 50 + "\n")
-            f.write(f"Cointegration test result: {cointegration_result}\n")
-            f.write("Conclusion: Does not meet the prerequisites for building ECM model\n")
-            f.write("Recommendation: Only analyze short-term ARDL model dynamic effects\n")
-
-        return None
 
     if ardl_fit is None:
         print("ARDL model estimation failed, cannot build ECM")
