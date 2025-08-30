@@ -823,14 +823,6 @@ def bounds_cointegration_test(ardl_fit):
     print("\n" + "=" * 60)
     print("Step 5: Bounds Test Cointegration Test")
     print("=" * 60)
-
-    if ardl_fit is None:
-        print("ARDL model estimation failed, cannot perform cointegration test")
-        with open(r'C:\Users\A\Desktop\bounds_test_results.txt', 'w', encoding='utf-8') as f:
-            f.write("Bounds Test Cointegration Test\n")
-            f.write("=" * 40 + "\n")
-            f.write("Cannot execute: ARDL model estimation failed\n")
-        return None, "Test failed"
         
     try:
         if hasattr(ardl_fit, 'bounds_test'):
